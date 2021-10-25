@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <header id="header"></header>
+    <div id="cart_overlay" class="cart_overlay">
+        <aside class="cart" id="cart">
+            <div class="cart_header">
+                <img src="img/Logo.svg" alt="logo">
+                <img class='close_cart_icon' id="close_cart_icon"
+                    src="img/close-icon.svg" alt="close icon">
+            </div>
+            <div class="cart_items" id="cart_items"></div>
+            <div class="cart_footer">
+                <div class="cart_total d-flex
+                justify-content-between align-items-center">
+                    <p>Total:</p>
+                    <span class="total" id="total_price_el">$00.00</span>
+                </div>
+                <button class="btn clear_cart_btn">Clear Cart</button>
+            </div>
+        </aside>
+    </div>
+    <div class="products section">
+        <div class="container">
+            <div class="row" id="row"></div>
+        </div>
+    </div>
+</body>
+</html>

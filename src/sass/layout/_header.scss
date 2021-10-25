@@ -1,0 +1,15 @@
+header {
+    padding: 49px 0;
+    ._row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navbar_cart {
+            cursor: pointer;
+            .navbar-cart_temp {
+                display: block;
+                margin-left: 16px;
+            }
+        }
+    }
+}

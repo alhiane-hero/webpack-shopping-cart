@@ -1,0 +1,69 @@
+.products {
+    padding: 30px 0 200px;
+    .product_item {
+        .product_img {
+            position: relative;
+            .btn_overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+                background-color: rgba(226, 226, 226, 0.92);
+                @include centerFlexBox();
+                @include generateTransition(height);
+                .add_to_cart_btn {
+                    position: relative;
+                    font-size: 40px;
+                    font-weight: 300;
+                    font-style: italic;
+                    padding: 7px 3px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 3px;
+                        background-color: #000;
+                        @include generateTransition(width);
+                    }
+                    &:hover {
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .product_info {
+            margin-top: 24px;
+            .product_text {
+                .product_title {
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+                .product_cate {
+                    padding-top: 7px;
+                    font-size: 14px;
+                    color: #404040;
+                    letter-spacing: 2px;
+                }
+            }
+            .product_price {
+                .price {
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+        }
+        &:hover {
+            .product_img {
+                .btn_overlay {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

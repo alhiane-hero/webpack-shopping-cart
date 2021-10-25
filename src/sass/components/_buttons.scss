@@ -1,0 +1,14 @@
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    display: block;
+    padding: 18px;
+    width: 100%;
+    background-color: #111;
+    text-transform: uppercase;
+    color: $whiteColor;
+}

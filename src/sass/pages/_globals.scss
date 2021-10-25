@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: {
+        size: 16px;
+        family: "Jost", sans-serif;
+    }
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: none;
+        background-color: #f1f1f1;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #000;
+        outline: 1px solid rgba(0, 0, 0, 0.5);
+    }
+}
+
+section {
+    padding: 80px 0;
+}

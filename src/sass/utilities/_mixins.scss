@@ -1,0 +1,80 @@
+// media queries mixins:
+@mixin mobileQuery {
+    @media (max-width: $mobileWidth) {
+        @content;
+    }
+}
+@mixin extraSmallQuery {
+    @media (min-width: $mobileWidth) {
+        @content;
+    }
+}
+@mixin smallQuery {
+    @media (min-width: $samllWidth) {
+        @content;
+    }
+}
+@mixin mediumQuery {
+    @media (min-width: $mediumWidth) {
+        @content;
+    }
+}
+@mixin largeQuery {
+    @media (min-width: $largeWidth) {
+        @content;
+    }
+}
+
+// overlay mixin:
+@mixin overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+// prefexer mixin:
+@mixin prefixer($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+// animation mixin:
+@mixin keyFram($animtion-name) {
+    @-webkit-keyframes #{$animtion-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animtion-name} {
+        @content;
+    }
+    @-o-keyframes #{$animtion-name} {
+        @content;
+    }
+    @keyframes #{$animtion-name} {
+        @content;
+    }
+}
+
+// generate transition:
+@mixin generateTransition($prop) {
+    transition: $prop 0.3s ease-in-out;
+}
+
+// center flex box:
+@mixin centerFlexBox() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// center abslout box:
+@mixin centerAbsloutBox() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
